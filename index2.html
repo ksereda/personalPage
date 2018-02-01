@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>KIRILL SEREDA page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="style2.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<!-- Navbar (хедер меню) -->
+<div class="ks-top">
+  <div class="ks-bar" id="myNavbar">
+    <a class="ks-bar-item ks-button ks-hover-black ks-hide-medium ks-hide-large ks-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="index.html" class="ks-bar-item ks-button" style="text-decoration:none; color:black">HOME</a>
+    </a>
+  </div>
+ 
+<!-- WORK section -->
+<div class="ks-content ks-container ks-padding-64" id="portfolio">
+<br><br><br><br><br><br><br>
+  <div class="bgimg-1 ks-display-container ks-opacity-min" id="home">
+    <div class="ks-display-middle" style="white-space:nowrap;">
+      <span class="ks-center ks-padding-large ks-black ks-xlarge ks-wide ks-animate-opacity">MY PROJECTS</span>
+    </div>
+  </div>
+  <p class="ks-center"><em><br><br>Click on the images</em></p><br><br>
+
+  <!-- Photos -->
+  <div class="ks-row-padding ks-center">
+    <div class="ks-col m3 abybe">
+      <p>DELIVERY service</p>
+      (Click here to read about Delivery)
+       <a href="index3.html"><img src="img/delivery.jpg" style="width:100%" onclick="onClick(this)" class="ks-hover-opacity" alt=""></a>
+    </div>
+
+    <div class="ks-col m3">
+      <p>jDeath project</p>
+      <img src="img/jdeath.jpg" style="width:100%" onclick="onClick(this)" class="ks-hover-opacity" alt="jDeath project: Write a servlet that will contain two fields and two buttons for displaying the richest user and for the sum of all the accounts in the bank (Stack of used technologies: Servlet, Maven, JDBC, MySQL, TomCat, MVC)">
+    </div>
+
+    <div class="ks-col m3">
+      <p>JavaTests project</p>
+      <img src="img/JavaTests.jpg" style="width:100%" onclick="onClick(this)" class="ks-hover-opacity" alt="JavaTests project in devincubator (Stack of used technologies: Spring, Hibernate, MySQL, MVC, JDBC, REST services, JSP, JavaScript, JUnit, Log4j, Tomcat)">
+    </div>
+
+    <div class="ks-col m3">
+      <p>JS Sort project</p>
+      <img src="img/jssort.jpg" style="width:100%" onclick="onClick(this)" class="ks-hover-opacity" alt="JS Sort: Implement any complex array sorting algorithm on js. The function should additionally count the number of sorting steps and output it together with the result (Stack of used technologies: HTML, CSS, JavaScript)">
+    </div>
+  </div>
+
+  <div class="ks-row-padding ks-center ks-section">
+    <div class="ks-col m3">
+      <p>Network chat project</p>
+      <img src="img/networkchat.jpg" style="width:100%" onclick="onClick(this)" class="ks-hover-opacity" alt="Network chat prohect (Using JFrame)">
+    </div>
+
+    <div class="ks-col m3">
+      <p>My landing page project</p>
+      <img src="img/landingpage.jpg" style="width:100%" onclick="onClick(this)" class="ks-hover-opacity" alt="My landing page (Using HTML, CSS, JavaScript)">
+    </div>
+
+<!-- Увеличение картинок в MY PROJECT-->
+<div id="modal01" class="ks-modal ks-black" onclick="this.style.display='none'">
+  <span class="ks-button ks-large ks-black ks-display-topright" title="Close Image"><i class="fa fa-remove"></i></span>
+  <div class="ks-modal-content ks-animate-zoom ks-center ks-transparent ks-padding-64">
+    <img id="img01" class="ks-image">
+    <p id="caption" class="ks-opacity ks-large"></p>
+  </div>
+</div>
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
